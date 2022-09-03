@@ -1,0 +1,110 @@
+    1  bash resize.sh
+    2  cd project-ml-microservice-kubernetes/
+    3  ls
+    4  bash resize.sh
+    5  cd project-ml-microservice-kubernetes/
+    6  cd project-ml-microservice-kubernetes/
+    7  make setup
+    8  make setup
+    9  source ~/.devops/bin/activate
+   10  make setup
+   11  source ~/.devops/bin/activate
+   12  source ~/.devops/bin/activate
+   13  deactivate
+   14  bash resize.sh 100
+   15  df -h
+   16  make install
+   17  git init
+   18  git add .
+   19  git commit -m "chore: set up environment"
+   20  make lint
+   21  docker image ls
+   22  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   23  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+   24  curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
+   25  sudo chmod +x ./kubectl
+   26  sudo mv ./kubectl /usr/local/bin/kubectl
+   27  docker version
+   28  make lint
+   29  bash make_prediction.sh
+   30  bash run_docker.sh
+   31  source ~/.devops/bin/activate
+   32  touch docker_out.txt
+   33  git add .
+   34  cd project-ml-microservice-kubernetes/
+   35  source ~/.devops/bin/activate
+   36  bash make_prediction.sh
+   37  mkdir .circleci/config.yml
+   38  mkdir .circleci
+   39  cd .circleci
+   40  touch config.yml
+   41  git status
+   42  git add .
+   43  git commit -m "chore: circleCI integration"
+   44  git branch -M main
+   45  git remote add # Python CircleCI 2.0 configuration file
+   46  #
+   47  # Check https://circleci.com/docs/2.0/language-python/ for more details
+   48  #
+   49  version: 2
+   50  jobs:
+   51    build:
+   52      docker:
+   53        # Use the same Docker base as the project
+   54        - image: python:3.7.3-stretch
+   55        
+   56      working_directory: ~/repo
+   57      steps:
+   58        - checkout
+   59        # Download and cache dependencies
+   60        - restore_cache:
+   61            keys:
+   62            - v1-dependencies-{{ checksum "requirements.txt" }}
+   63            # fallback to using the latest cache if no exact match is found
+   64            - v1-dependencies-
+   65        - run:
+   66            name: install dependencies
+   67            command: |             python3 -m venv venv
+   68              . venv/bin/activate
+   69              make install
+   70              # Install hadolint
+   71              wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v1.16.3/hadolint-Linux-x86_64 &&            chmod +x /bin/hadolint
+   72        - save_cache:
+   73            paths:
+   74              - ./venv
+   75            key: v1-dependencies-{{ checksum "requirements.txt" }}
+   76          
+   77       # run lints!
+   78        - run:
+   79            name: run lint
+   80            command: |             . venv/bin/activate
+   81              make lint
+   82  git remote add origin git@github.com:Ganiyat-dev/Operationalize-ML-Microservice.git
+   83  git push -u origin main
+   84  ssh-keygen -t rsa
+   85  cat home/ec2-user/.ssh/id_rsa.pub
+   86  cat /home/ec2-user//.ssh/id_rsa.pub
+   87  git remote add origin git@github.com:Ganiyat-dev/Operationalize-ML-Microservice.git
+   88  git push -u origin main
+   89  git pull
+   90  git pull git@github.com:Ganiyat-dev/Operationalize-ML-Microservice.git main
+   91  git config --global  pull.rebase false
+   92  git pull
+   93  git push
+   94  git push --set-upstream origin main
+   95  git add .
+   96  git commit -m "chore: update readme file"
+   97  git config --global user.name Ganiyat
+   98  git config --global user.email ganiyatolajumoke.go@gmail.com
+   99  git push
+  100  git add .
+  101  git commit -m "chore: add circleci status badge"
+  102  git status
+  103  git add .
+  104  git commit -m "chore: add circleci status badge"
+  105  git add README.md
+  106  cd ..
+  107  git status
+  108  git add .
+  109  git commit -m "chore: add circleci status badge"
+  110  history > cmds.txt
