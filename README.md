@@ -24,7 +24,7 @@ The following was carried out:
 # Running the Python scripts and web app
 ---
 
-## Setup the Environment
+## Setup the Environment (using AWS cloud 9)
 
 * Create a virtualenv with Python 3.7 and activate it. Refer to this link for help on specifying the Python version in the virtualenv. 
 ```bash
@@ -47,3 +47,14 @@ source .devops/bin/activate
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+* prediction outputs
+
+![Screenshot from 2022-09-03 09-38-36](https://user-images.githubusercontent.com/60348108/188265716-925fdc53-de3a-4f6d-9909-670edea71f3f.png)
+
+![Screenshot from 2022-09-03 07-25-22](https://user-images.githubusercontent.com/60348108/188265732-934e4930-03f4-4cac-bda3-54007963f6e0.png)
+
+
+
+
+
